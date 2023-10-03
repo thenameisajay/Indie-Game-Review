@@ -1,3 +1,5 @@
+
+// Next js uses file system routing. So, we can create a folder in app folder and add a page.jsx file in it.
 export default function HomePage() {
     return (
         <div>
