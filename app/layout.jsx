@@ -25,3 +25,4 @@ export default function RootLayout({ children }) {
 }
 
 // Prefix = false , will not prefetch the page , it will load the page only when the user clicks on the link
+// Different behaviour in dev server and production server
