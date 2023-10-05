@@ -1,10 +1,12 @@
 // This is the review page. It will list all the reviews.
 // To create a new page , create a folder in app folder and add a page.jsx file in it. (next js way).
 import Link from "next/link"; // Link is a component that allows us to link to other pages in our app.
+import React from 'react';
+import Heading from '../../components/Heading';
 export default function ReviewsPage() {
     return (
         <div>
-           <h1>Reviews</h1>
+          <Heading>Reviews</Heading>
            <p>Here we'll list all the reviews.</p>
            <ul>
             <li>
