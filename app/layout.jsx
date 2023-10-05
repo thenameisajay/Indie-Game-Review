@@ -1,8 +1,9 @@
 import './global.css';
 import Navbar from  '../components/Navbar';
+import {orbitron} from '@/app/fonts';
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={orbitron.variable}>
       <body className="bg-orange-50 flex flex-col px-4 py-2 min-h-screen ">
         <header>
        <Navbar />

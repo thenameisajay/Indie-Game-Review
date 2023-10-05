@@ -7,17 +7,19 @@ export default function ReviewsPage() {
     return (
         <div>
           <Heading>Reviews</Heading>
-           <p>Here we'll list all the reviews.</p>
-           <ul>
-            <li>
+           
+           <ul className="flex flex-col gap-3">
+            <li className="bg-white flex flex-col gap-3 rounded-t shadow w-80 hover:shadow-xl font-orbitron font-semibold">
                 <Link href="/reviews/hollow-knight">
-                    Hollow Knight
+                <img src ="/images/hollow-knight.jpg" alt="Hollow Knight" className="rounded-t"/>
+                    <h2 className="py-1 text-center"> Hollow Knight</h2>
                 </Link>
             </li>
           
-            <li>
-            <Link href="/reviews/stardew-valley">
-                   Stardew Valley
+            <li className="bg-white flex flex-col gap-3 rounded-t shadow w-80 hover:shadow-xl font-orbitron font-semibold">
+                <Link href="/reviews/stardew-valley">
+                <img src ="/images/stardew-valley.jpg" alt="Stardew Valley" className="rounded-t"/>
+                    <h2 className="py-1 text-center"> Stardew Valley</h2>
                 </Link>
             </li>
            </ul>

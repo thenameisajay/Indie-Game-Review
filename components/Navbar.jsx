@@ -8,12 +8,12 @@ export default function Navbar() {
             <ul className= "flex gap-2">
               <li>
                <Link href="/"
-               className="text-orange-800 hover:underline">
-            Home
+               className="text-orange-800 hover:underline font-orbitron font-bold">
+           indie Gamer
                 </Link>
               </li>
-              <li>
-              <Link href="/reviews"
+              <li className="ml-auto">
+              <Link href="/reviews "
                className="text-orange-800 hover:underline">
             Reviews
                 </Link>

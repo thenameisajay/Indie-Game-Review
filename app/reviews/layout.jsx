@@ -5,9 +5,7 @@ export default function ReviewsLayout({children}){
 return (
     <div>
         {children}
-        <div style={{color: 'red'}}>
-        [Practicing Layout]
-        </div>
+       
     </div>
 );
 }
