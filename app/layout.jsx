@@ -1,3 +1,4 @@
+import './global.css';
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -12,7 +13,7 @@ export default function RootLayout({ children }) {
                 <a href="/reviews">Reviews</a>
               </li>
               <li>
-                <a href="/about" prefetch ={false} >About</a> 
+                <a href="/about" prefetch ="false" >About</a> 
               </li>
             </ul>
           </nav>
