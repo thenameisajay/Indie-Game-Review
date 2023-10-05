@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       fontFamily:{
         orbitron: ["var(--font-orbitron)", "sans-serif"], //  First element is the font name and second element is the fallback font.
+        sans:["var(--font-exo-2)", "sans-serif"],
       }
     },
   },

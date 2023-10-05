@@ -1,9 +1,9 @@
 import './global.css';
 import Navbar from  '../components/Navbar';
-import {orbitron} from '@/app/fonts';
+import {exo_2, orbitron} from '@/app/fonts';
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={orbitron.variable}>
+    <html lang="en" className={` ${exo_2.variable} ${orbitron.variable}`}> 
       <body className="bg-orange-50 flex flex-col px-4 py-2 min-h-screen ">
         <header>
        <Navbar />
@@ -20,3 +20,4 @@ export default function RootLayout({ children }) {
 
 // Prefix = false , will not prefetch the page , it will load the page only when the user clicks on the link
 // Different behaviour in dev server and production server
+// After adding custom fonts, declare it in html tag in layout.jsx
