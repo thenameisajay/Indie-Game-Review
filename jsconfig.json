@@ -1,0 +1,10 @@
+// Alias for import example : import { example } from '@/example'
+
+{
+    "compilerOptions": {
+        "paths": {
+            "@/*": ["./*"],
+            
+        }
+    }
+}
