@@ -1,22 +1,11 @@
 import './global.css';
+import Navbar from  '../components/Navbar';
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="flex flex-col px-4 py-2 min-h-screen ">
+      <body className="bg-orange-50 flex flex-col px-4 py-2 min-h-screen ">
         <header>
-          <nav>
-            <ul className= "flex gap-2">
-              <li>
-                <a href="/">Home</a>{" "}
-              </li>
-              <li>
-                <a href="/reviews">Reviews</a>
-              </li>
-              <li>
-                <a href="/about" prefetch ="false" >About</a> 
-              </li>
-            </ul>
-          </nav>
+       <Navbar />
         </header>
         <main className= "py-3">{children}</main>
         <footer className= " border-t py-3 text-center text-xs">
