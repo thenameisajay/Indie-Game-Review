@@ -1,21 +1,16 @@
 import React from 'react';
-import {readFile} from 'node:fs/promises';// To read the file from the file system.
-import {marked} from 'marked';// To convert markdown to HTML.
 import Heading from "@/components/Heading";
-import matter from 'gray-matter'; // To parse the front matter from the markdown file.
+import {getReview} from "@/lib/reviews";
 
 export default async function StardewValleyPage() {
- const text = await readFile('./content/reviews/stardew-valley.md', 'utf-8');
-const {content ,data:{title,image,date}} = matter(text);
- const html = marked(content);
- 
 
+const review = await getReview('stardew-valley');
     return (
         <div>
-           <Heading>{title}</Heading>
-           <p className='italic pb-2'>{date}</p>
-           <img src ={image} alt='stardew-valley' width={640} height={360} className='mb-2 rounded'/>
-           <article dangerouslySetInnerHTML={{__html: html}} className='max-w-screen-sm prose prose-slate'/> 
+           <Heading>{review.title}</Heading>
+           <p className='italic pb-2'>{review.date}</p>
+           <img src ={review.image} alt='stardew-valley' width={640} height={360} className='mb-2 rounded'/>
+           <article dangerouslySetInnerHTML={{__html: review.body}} className='max-w-screen-sm prose prose-slate'/> 
 
         </div>
     )   ;
