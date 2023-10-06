@@ -8,8 +8,8 @@ export default async function StardewValleyPage() {
     return (
         <div>
            <Heading>Stardew Valley</Heading>
-           <img src ="/images/stardew-valley.jpg" alt='stardew-valley' width={320} height={180} className='mb-2 rounded'/>
-           <article dangerouslySetInnerHTML={{__html: html}} className='prose'/> 
+           <img src ="/images/stardew-valley.jpg" alt='stardew-valley' width={640} height={360} className='mb-2 rounded'/>
+           <article dangerouslySetInnerHTML={{__html: html}} className='max-w-screen-sm prose prose-slate'/> 
         </div>
     )   ;
 };
