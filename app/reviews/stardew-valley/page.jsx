@@ -16,6 +16,7 @@ const {content ,data:{title,image,date}} = matter(text);
            <p className='italic pb-2'>{date}</p>
            <img src ={image} alt='stardew-valley' width={640} height={360} className='mb-2 rounded'/>
            <article dangerouslySetInnerHTML={{__html: html}} className='max-w-screen-sm prose prose-slate'/> 
+
         </div>
     )   ;
 };
