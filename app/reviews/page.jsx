@@ -3,26 +3,27 @@
 import Link from "next/link"; // Link is a component that allows us to link to other pages in our app.
 import React from 'react';
 import Heading from '@/components/Heading';
-export default function ReviewsPage() {
+import {getReviews} from '@/lib/reviews';
+export default async function ReviewsPage() {
+
+const reviews = await getReviews();
+
+
     return (
         <div>
           <Heading>Reviews</Heading>
+          {reviews.map(review => (
+            
+            <ul className="flex flex-col gap-3">
+            <li className="bg-white flex flex-col flex-wrap gap-3 rounded-t shadow w-80 hover:shadow-xl font-orbitron font-semibold mb-3 ">
+                <Link href={`/reviews/${review.slug}`}>
+                <img src ={review.image} alt={review.slug} width={640} height={360} className='mb-2 rounded'/>
+                    <h2 className="py-1 text-center">{review.title}</h2>
+                </Link>
+            </li>
+            </ul>
+            ))}
            
-           <ul className="flex flex-col gap-3">
-            <li className="bg-white flex flex-col gap-3 rounded-t shadow w-80 hover:shadow-xl font-orbitron font-semibold">
-                <Link href="/reviews/hollow-knight">
-                <img src ="/images/hollow-knight.jpg" alt="Hollow Knight" className="rounded-t"/>
-                    <h2 className="py-1 text-center"> Hollow Knight</h2>
-                </Link>
-            </li>
-          
-            <li className="bg-white flex flex-col gap-3 rounded-t shadow w-80 hover:shadow-xl font-orbitron font-semibold">
-                <Link href="/reviews/stardew-valley">
-                <img src ="/images/stardew-valley.jpg" alt="Stardew Valley" className="rounded-t"/>
-                    <h2 className="py-1 text-center"> Stardew Valley</h2>
-                </Link>
-            </li>
-           </ul>
         </div>
     )   ;
 };

@@ -2,8 +2,18 @@ import React from 'react';
 import Heading from "@/components/Heading";
 import {getReview} from "@/lib/reviews";
 
+
+export async function getStaticParams(){
+const slugs = await getSlugs();
+ return slugs.map(slug => ({slug}));
+};
+
+
+
+
+
 export default async function ReviewPage(props) {
-console.log(props);
+
 const review = await getReview(props.params.slug);
     return (
         <div>
