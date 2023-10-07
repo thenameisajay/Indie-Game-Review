@@ -9,6 +9,14 @@ const slugs = await getSlugs();
 };
 
 
+// Dynamic metadata generation.
+export async function generateMetadata(props){
+    const review = await getReview(props.params.slug);
+    return { 
+        title: review.title,
+    };
+
+}
 
 
 
