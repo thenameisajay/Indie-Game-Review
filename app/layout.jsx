@@ -1,6 +1,17 @@
 import './global.css';
 import Navbar from  '../components/Navbar';
 import {exo_2, orbitron} from '@/app/fonts';
+
+
+
+// Meta data for the page. https://nextjs.org/docs/app/building-your-application/optimizing/metadata
+export const metadata ={
+  title: 'Indie Gamer',
+  description: 'Only the best indie games, reviewed for you.',
+  page: 'home',
+  locale : 'en_US',
+  type : 'website',
+}
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={` ${exo_2.variable} ${orbitron.variable}`}> 

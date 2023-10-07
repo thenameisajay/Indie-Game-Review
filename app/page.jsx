@@ -4,14 +4,7 @@ import Link from "next/link";
 import { getFeaturedReview } from "@/lib/reviews";
 
 
-// Meta data for the page. https://nextjs.org/docs/app/building-your-application/optimizing/metadata
- export const metadata ={
-      title: 'Indie Gamer',
-      description: 'Only the best indie games, reviewed for you.',
-      page: 'home',
-      locale : 'en_US',
-      type : 'website',
- }
+
 
 // Next js uses file system routing. So, we can create a folder in app folder and add a page.jsx file in it.
 export default async function HomePage() {
