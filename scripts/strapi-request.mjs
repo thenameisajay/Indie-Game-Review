@@ -18,7 +18,7 @@ const populate =
 
 const endpoint = URL + "/api/reviews" + populate;
 
-console.log(endpoint);
+
 
 const response = await fetch(endpoint);
 
