@@ -9,7 +9,7 @@ import Heading from '@/components/Heading';
 import { getReviews } from '@/lib/reviews';
 
 export default async function ReviewsPage() {
-    const reviews = await getReviews();
+    const reviews = await getReviews(7);
 
     return (
         <div>
@@ -21,6 +21,7 @@ export default async function ReviewsPage() {
                         <Link href={`/reviews/${review.slug}`}>
                             <Image src={review.image} alt={review.slug} width={640} height={360} className='mb-2 rounded' />
                             <h2 className="py-1 justify-center items-center text-center flex border-t-2 w-fit ">{review.title}</h2>
+                         
                         </Link>
                     </li>
                 </ul>
