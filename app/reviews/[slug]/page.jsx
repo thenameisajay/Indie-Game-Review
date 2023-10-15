@@ -2,15 +2,23 @@ import React from "react";
 import Heading from "@/components/Heading";
 import { getReview } from "@/lib/reviews";
 import ShareButtons from "@/components/ShareButtons";
+import { notFound } from "next/navigation"; 
 
-export async function getStaticParams() {
-  const slugs = await getSlugs();
-  return slugs.map((slug) => ({ slug }));
-}
+export const dynamic = 'force-dynamic';
+
+
+
+// export async function getStaticParams() {
+//   const slugs = await getSlugs();
+//   return slugs.map((slug) => ({ slug }));
+// }
 
 // Dynamic metadata generation.
 export async function generateMetadata(props) {
   const review = await getReview(props.params.slug);
+ if(!review) {
+  notFound();
+ }
   return {
     title: review.title,
   };
@@ -18,6 +26,10 @@ export async function generateMetadata(props) {
 
 export default async function ReviewPage(props) {
   const review = await getReview(props.params.slug);
+  if(!review) {
+    notFound();
+   }
+
   return (
     <div>
       <Heading>{review.title}</Heading>
