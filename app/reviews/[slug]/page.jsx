@@ -3,10 +3,10 @@ import Heading from "@/components/Heading";
 import {getReview} from "@/lib/reviews";
  import ShareButtons from '@/components/ShareButtons';
 
-export async function getStaticParams(){
-const slugs = await getSlugs();
- return slugs.map(slug => ({slug}));
-};
+// export async function getStaticParams(){
+// const slugs = await getSlugs();
+//  return slugs.map(slug => ({slug}));
+// };
 
 
 // Dynamic metadata generation.
