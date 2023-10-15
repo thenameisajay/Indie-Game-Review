@@ -16,6 +16,7 @@ export const dynamic = 'force-dynamic';
 // Dynamic metadata generation.
 export async function generateMetadata(props) {
   const review = await getReview(props.params.slug);
+
  if(!review) {
   notFound();
  }
