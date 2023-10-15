@@ -15,10 +15,10 @@ const reviews = await getReviews();
           {reviews.map(review => (
             
             <ul className="flex flex-col gap-3">
-            <li className="bg-white flex flex-col flex-wrap gap-3 rounded-t shadow w-80 hover:shadow-xl font-orbitron font-semibold mb-3 ">
+            <li className="bg-white flex flex-col flex-wrap gap-3  justify-center items-center   rounded-t shadow w-80 hover:shadow-xl font-orbitron font-semibold mb-3 ">
                 <Link href={`/reviews/${review.slug}`}>
                 <img src ={review.image} alt={review.slug} width={640} height={360} className='mb-2 rounded'/>
-                    <h2 className="py-1 text-center">{review.title}</h2>
+                    <h2 className="py-1 justify-center items-center text-center flex border-t-2 w-fit ">{review.title}</h2>
                 </Link>
             </li>
             </ul>

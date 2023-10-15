@@ -9,6 +9,8 @@ const populate =
     {
       fields: ["slug", "title", "subtitle", "publishedAt"],
       populate: { image: { fields: ["url"] } },
+      pagination: { pageSize: 6 },
+      sort: ["publishedAt:desc"],
     },
     { encodeValuesOnly: true }
   ); // By default , strapi treats image as seperate object and does not include it in the api call , this code also includes the media in the call.
