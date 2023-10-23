@@ -1,0 +1,1 @@
+web: cd next-reviews-cms && npm start
