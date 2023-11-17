@@ -9,7 +9,7 @@ This application is a game review application that allows users to view games an
 
 ## Screenshot:
 
-
+![Alt text](indie_gamer_pic.webp)
 
 
 ## Repo contains:
